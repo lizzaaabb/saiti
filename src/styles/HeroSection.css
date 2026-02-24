@@ -1,0 +1,118 @@
+.hero-section-container{
+    background-color: #020103;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: visible;
+    width: 100%;
+    height: 80vh;
+}
+
+.hs-blur1{
+    margin-top: -590px;
+    z-index: -1;
+    width: 100%;
+}
+
+.hs-blur2 {
+  position: absolute;
+  top: 620px;        /* use top instead of margin-top for abs elements */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  z-index: 3;
+  filter: drop-shadow(0px 0px 60px rgba(140, 69, 255, 0.6));
+  
+}
+
+
+.hs-images{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hs-web{
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+.hs-web-fade {
+  position: absolute;
+  top: 620px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 40%, #020103 65%);
+  pointer-events: none;
+  z-index: 4;
+}
+
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hs-blur2 {
+    top: 180px;
+    width: 95%;
+  }
+  .hs-web-fade {
+    top: 480px;
+    width: 95%;
+  }
+  .hs-blur1{
+    margin-top: -490px;
+    z-index: -1;
+    width: 100%;
+}
+}
+
+/* Large phones (400px–768px) */
+@media (max-width: 768px) {
+  .hs-blur2 {
+    top: 510px;
+    width: 95%;
+  }
+  .hs-web-fade {
+    top: 150px;
+    width: 100%;
+  }
+  
+}
+
+/* Small phones (up to 400px) */
+@media (max-width: 400px) {
+  .hs-blur2 {
+    top: 530px;
+    width: 95%;
+  }
+  .hs-web-fade {
+    top: 190px;
+    width: 100%;
+  }
+  .hs-blur1{
+    margin-top: -490px;
+    z-index: -1;
+    width: 100%;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hs-blur2 {
+    top: 580px;
+    width: 95%;
+  }
+  .hs-web-fade {
+    top: 330px;
+    width: 95%;
+  }
+  .hs-blur1 {
+    margin-top: -490px;
+    width: 100%;
+  }
+}
