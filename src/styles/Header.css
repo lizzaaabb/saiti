@@ -6,6 +6,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body{
+  background-color: #020103;
+}
 :root {
   --hdr-bg: #020103;
   --hdr-text: #ffffff;
