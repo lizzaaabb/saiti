@@ -67,7 +67,7 @@ function Pricing() {
                   : <span className="pricing-custom">შეთანხმებით</span>
                 }
               </div>
-              <a href={`https://wa.me/995574065469?text=${encodeURIComponent('გამარჯობა! მინდა შევუკვეთო: ' + plan.name + ' (' + plan.price + '₾ დან)')}`} target="_blank" rel="noopener noreferrer" className="pricing-cta">დაიწყეთ</a>
+              <a href={`https://wa.me/995574065469?text=${encodeURIComponent('გამარჯობა! მინდა შევუკვეთო: ' + plan.name + ' (' + plan.price + '₾ დან)')}`} target="_blank" rel="noopener noreferrer" className="pricing-cta">დაწყება</a>
             </div>
           </div>
         ))}

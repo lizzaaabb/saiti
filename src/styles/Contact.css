@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/boowie');
+
+/* ─────────────────────────────────────────
+   PAGE SHELL — 100vh split layout
+───────────────────────────────────────── */
+.cnt-page {
+  min-height: 100vh;
+  background-color: #020103;
+  display: flex;
+  align-items: center;
+  padding: 100px 120px 80px;
+  box-sizing: border-box;
+  gap: 80px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 140px;
+}
+
+/* purple blur orbs */
+.cnt-blur-tl {
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 600px;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.cnt-blur-br {
+  position: absolute;
+  bottom: -80px;
+  right: -80px;
+  width: 500px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(180deg);
+}
+
+/* ─────────────────────────────────────────
+   LEFT — hero text
+───────────────────────────────────────── */
+.cnt-left {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 420px;
+}
+
+.cnt-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8C45FF;
+  margin: 0;
+}
+
+.cnt-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.cnt-title-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #8C45FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cnt-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.cnt-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 8px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.cnt-location svg {
+  color: #8C45FF;
+  flex-shrink: 0;
+}
+
+/* ─────────────────────────────────────────
+   RIGHT — contact groups
+───────────────────────────────────────── */
+.cnt-right {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  max-width: 560px;
+}
+
+.cnt-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.cnt-group-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cnt-group-num {
+  font-size: 0.55rem;
+  color: rgba(140, 69, 255, 0.6);
+  letter-spacing: 0.1em;
+}
+
+.cnt-group-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* ─────────────────────────────────────────
+   CARD
+───────────────────────────────────────── */
+.cnt-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 14px;
+  text-decoration: none;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  opacity: 0;
+  transform: translateX(20px);
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cnt-card--visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cnt-card:hover {
+  border-color: rgba(140, 69, 255, 0.5);
+  background: rgba(140, 69, 255, 0.07);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.15), 0 4px 24px rgba(140, 69, 255, 0.15);
+}
+
+/* shimmer top line */
+.cnt-card-shine {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.14), transparent);
+  border-radius: 100px;
+  pointer-events: none;
+}
+
+/* purple glow on hover */
+.cnt-card-glow {
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 120px;
+  height: 80px;
+  background: radial-gradient(ellipse, rgba(140, 69, 255, 0.25) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.cnt-card:hover .cnt-card-glow {
+  opacity: 1;
+}
+
+/* icon */
+.cnt-card-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 13px;
+  border: 1px solid rgba(140, 69, 255, 0.3);
+  background: rgba(140, 69, 255, 0.09);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C45FF;
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cnt-card:hover .cnt-card-icon {
+  border-color: rgba(140, 69, 255, 0.65);
+  background: rgba(140, 69, 255, 0.16);
+  box-shadow: 0 0 18px rgba(140, 69, 255, 0.3);
+}
+
+/* text */
+.cnt-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.cnt-card-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(140, 69, 255, 0.8);
+  transition: color 0.3s ease;
+}
+
+.cnt-card:hover .cnt-card-label {
+  color: #8C45FF;
+}
+
+.cnt-card-value {
+  font-family: 'Boowie', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cnt-card-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.03em;
+}
+
+/* arrow */
+.cnt-card-arrow {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+}
+
+.cnt-card:hover .cnt-card-arrow {
+  border-color: #8C45FF;
+  color: #8C45FF;
+  background: rgba(140, 69, 255, 0.1);
+  transform: rotate(45deg);
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .cnt-page { padding: 100px 60px 80px; gap: 60px; }
+  .cnt-title { font-size: 2.8rem; }
+}
+
+@media (max-width: 900px) {
+  .cnt-page {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 100px 40px 60px;
+    gap: 48px;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 140px;
+  }
+  .cnt-left { max-width: 100%; align-items: center; }
+  .cnt-right { max-width: 100%; width: 100%; }
+  .cnt-title { font-size: 2.4rem; }
+  .cnt-blur-tl { width: 400px; top: -40px; left: -40px; }
+  .cnt-blur-br { width: 320px; }
+  .cnt-location { align-self: center; }
+  .cnt-group-label { justify-content: center; }
+  .cnt-card { text-align: left; }
+}
+
+@media (max-width: 600px) {
+  .cnt-page { padding: 90px 20px 48px; gap: 40px; }
+  .cnt-title { font-size: 2rem; }
+  .cnt-desc { font-size: 0.85rem; }
+  .cnt-card { padding: 14px 16px; gap: 12px; }
+  .cnt-card-icon { width: 44px; height: 44px; border-radius: 11px; }
+  .cnt-card-value { font-size: 0.82rem; }
+  .cnt-blur-tl { width: 280px; }
+  .cnt-blur-br { display: none; }
+  .cnt-group-label { justify-content: center; }
+}
+
+@media (max-width: 400px) {
+  .cnt-title { font-size: 1.7rem; }
+  .cnt-card-value { font-size: 0.75rem; }
+}

@@ -1,23 +1,36 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
-
 import HeroSection from './components/HeroSection';
-import Brands from './components/Brands'
-import Projects from './components/Projects'
-import Pricing from './components/Pricing'
-import Cta from './components/Cta'
+import Brands from './components/Brands';
+import Projects from './components/Projects';
+import Pricing from './components/Pricing';
+import Cta from './components/Cta';
+import Contact from './components/Contact';
 
+function Home() {
+  return (
+    <>
+      <HeroSection />
+      <Brands />
+      <Projects />
+      <Pricing />
+      <Cta />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HeroSection />
-      <Brands/>
-      <Projects/>
-      <Pricing/>
-      <Cta/>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

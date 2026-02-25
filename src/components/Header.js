@@ -4,10 +4,10 @@ import '../styles/Header.css'
 const Logo = process.env.PUBLIC_URL + '/pics/Logo.png';
 
 const navLinks = [
-  { label: 'მთავარი', href: '#home' },
+  { label: 'მთავარი', href: '/' },
   { label: 'პროექტები', href: '#work' },
   { label: 'საიტის ფასები', href: '#blog' },
-  { label: 'კონტაქტი', href: '#contact' },
+  { label: 'კონტაქტი', href: '/contact' },
 ]
 
 function Header() {
