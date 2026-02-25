@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/saiti/static/css/main.e1bc625b.css",
-    "main.js": "/saiti/static/js/main.1da118c9.js",
-    "index.html": "/saiti/index.html",
-    "main.e1bc625b.css.map": "/saiti/static/css/main.e1bc625b.css.map",
-    "main.1da118c9.js.map": "/saiti/static/js/main.1da118c9.js.map"
+    "main.css": "/static/css/main.e1bc625b.css",
+    "main.js": "/static/js/main.c5a066c6.js",
+    "index.html": "/index.html",
+    "main.e1bc625b.css.map": "/static/css/main.e1bc625b.css.map",
+    "main.c5a066c6.js.map": "/static/js/main.c5a066c6.js.map"
   },
   "entrypoints": [
     "static/css/main.e1bc625b.css",
-    "static/js/main.1da118c9.js"
+    "static/js/main.c5a066c6.js"
   ]
 }
