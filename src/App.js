@@ -4,6 +4,8 @@ import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Brands from './components/Brands'
 import Projects from './components/Projects'
+import Pricing from './components/Pricing'
+import Cta from './components/Cta'
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
       <HeroSection />
       <Brands/>
       <Projects/>
+      <Pricing/>
+      <Cta/>
     </div>
   );
 }

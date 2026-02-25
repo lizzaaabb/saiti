@@ -14,7 +14,7 @@ function HeroSection() {
         <h1 className="hero-title">საიტის აწყობა</h1>
         <h1 className="hero-title2">ვებ გვერდების დამზადება</h1>
         <p className="hero-subtitle">პრემიუმ ხარისხის ვებ გვერდების დამზადება</p>
-        <a href="#contact" className="hero-cta">დაგვიკავშირდით</a>
+        <a href="#contact" className="hero-cta">დაგვიკავშირდი</a>
       </div>
 
       <div className="hs-web">

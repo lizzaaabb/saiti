@@ -6,7 +6,7 @@ const Logo = process.env.PUBLIC_URL + '/pics/Logo.png';
 const navLinks = [
   { label: 'მთავარი', href: '#home' },
   { label: 'პროექტები', href: '#work' },
-  { label: 'ბლოგი', href: '#blog' },
+  { label: 'საიტის ფასები', href: '#blog' },
   { label: 'კონტაქტი', href: '#contact' },
 ]
 
@@ -33,7 +33,7 @@ function Header() {
         </ul>
 
         {/* CTA Button */}
-        <a href="#contact" className="hdr-cta">დაგვიკავშირდით</a>
+        <a href="#contact" className="hdr-cta">დაგვიკავშირდი</a>
 
         {/* Mobile hamburger */}
         <button
@@ -61,7 +61,7 @@ function Header() {
           </a>
         ))}
         <a href="#contact" className="hdr-mobile-cta" onClick={() => setMenuOpen(false)}>
-          დაგვიკავშირდით
+          დაგვიკავშირდი
         </a>
       </div>
     </header>

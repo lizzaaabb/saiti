@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/boowie');
+
+.pricing-container {
+  background-color: #020103;
+  width: 100%;
+  padding: 96px 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pricing-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  gap: 18px;
+}
+
+.pricing-heading-line {
+  display: block;
+  width: 70px;
+  height: 3px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.pricing-heading-line--left  { background: linear-gradient(90deg, transparent, #8C45FF); }
+.pricing-heading-line--right { background: linear-gradient(90deg, #8C45FF, transparent); }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 28px 24px 24px;
+  box-sizing: border-box;
+  min-height: 320px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.pricing-card:hover {
+  background: rgba(140, 69, 255, 0.06);
+  border-color: rgba(140, 69, 255, 0.45);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.15), 0 8px 40px rgba(140, 69, 255, 0.12);
+}
+
+.pricing-card--popular {
+  border-color: rgba(140, 69, 255, 0.5);
+  background: rgba(140, 69, 255, 0.07);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.25), 0 8px 48px rgba(140, 69, 255, 0.18);
+}
+
+.pricing-card--popular:hover {
+  border-color: rgba(140, 69, 255, 0.7);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.35), 0 12px 56px rgba(140, 69, 255, 0.25);
+}
+
+.pricing-glass-border {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  pointer-events: none;
+  border-radius: 100px;
+}
+
+.pricing-card--popular .pricing-glass-border {
+  background: linear-gradient(90deg, transparent, rgba(140, 69, 255, 0.6), transparent);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0d0518, #0d0518) padding-box,
+    linear-gradient(90deg, #c084fc, #8C45FF, #5b21b6, #8C45FF, #c084fc) border-box;
+}
+
+.pricing-top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pricing-index {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: rgba(140, 69, 255, 0.5);
+  transition: color 0.3s ease;
+}
+
+.pricing-card:hover .pricing-index,
+.pricing-card--popular .pricing-index {
+  color: rgba(140, 69, 255, 0.9);
+}
+
+.pricing-name {
+  font-family: 'Boowie', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.pricing-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.pricing-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.pricing-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.pricing-from {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.08em;
+  margin-right: 2px;
+}
+
+.pricing-amount {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+}
+
+.pricing-currency {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pricing-custom {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.pricing-cta {
+  display: inline-block;
+  padding: 10px 26px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  border-radius: 100px;
+  white-space: nowrap;
+  text-align: center;
+  color: #fff;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#020103, #020103) padding-box,
+    linear-gradient(90deg, #c084fc, #8C45FF, #5b21b6, #8C45FF, #c084fc) border-box;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.pricing-cta:hover {
+  box-shadow: 0 0 28px rgba(140, 69, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+.pricing-card--popular .pricing-cta {
+  background:
+    linear-gradient(90deg, #8C45FF, #5b21b6) padding-box,
+    linear-gradient(90deg, #c084fc, #8C45FF, #5b21b6, #8C45FF, #c084fc) border-box;
+  color: #fff;
+}
+
+.pricing-card--popular .pricing-cta:hover {
+  box-shadow: 0 0 36px rgba(140, 69, 255, 0.6);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .pricing-container { padding: 72px 40px; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-heading { font-size: 1.7rem; }
+  .pricing-heading-line { width: 50px; }
+}
+
+@media (max-width: 768px) {
+  .pricing-container { padding: 56px 20px; gap: 32px; }
+  .pricing-heading { font-size: 1.4rem; gap: 14px; }
+  .pricing-heading-line { width: 36px; height: 2px; }
+  .pricing-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .pricing-card { min-height: 280px; padding: 22px 18px 20px; }
+  .pricing-amount { font-size: 1.7rem; }
+}
+
+@media (max-width: 480px) {
+  .pricing-container { padding: 48px 14px; gap: 24px; }
+  .pricing-heading { font-size: 1.2rem; gap: 10px; }
+  .pricing-heading-line { width: 24px; height: 2px; }
+  .pricing-grid { grid-template-columns: 1fr; gap: 12px; }
+  .pricing-card { min-height: unset; }
+  .pricing-amount { font-size: 1.5rem; }
+}
+
+@media (max-width: 360px) {
+  .pricing-heading { font-size: 1rem; gap: 8px; }
+  .pricing-heading-line { width: 18px; }
+}
