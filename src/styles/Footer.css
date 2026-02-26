@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
+
 @import url('https://fonts.cdnfonts.com/css/boowie');
 
 .ftr-container {
@@ -182,4 +182,10 @@
   .ftr-link { font-size: 0.72rem; }
   .ftr-col-title { font-size: 0.68rem; }
   .ftr-copy, .ftr-location { font-size: 0.6rem; }
+}
+
+.ftr-col nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }

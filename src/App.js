@@ -9,6 +9,7 @@ import Cta from './components/Cta';
 import Contact from './components/Contact';
 import Footer from './components/Footer'
 import Fasebi from './components/Fasebi'
+import ProjectsPage from './components/ProjectsPage'
 
 function Home() {
   useEffect(() => {
@@ -35,6 +36,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/fasebi" element={<Fasebi />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+
 
         </Routes>
         <Footer/>
