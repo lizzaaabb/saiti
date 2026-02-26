@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────
+   SECTION
+───────────────────────────────────────── */
+.faq-section {
+  background-color: #020103;
+  width: 100%;
+  padding: 96px 24px;
+  box-sizing: border-box;
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.faq-inner {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* ─────────────────────────────────────────
+   HEADER
+───────────────────────────────────────── */
+.faq-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.faq-heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.faq-line {
+  display: block;
+  height: 2px;
+  width: 60px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.faq-line--left  { background: linear-gradient(90deg, transparent, #8C45FF); }
+.faq-line--right { background: linear-gradient(90deg, #8C45FF, transparent); }
+
+/* ─────────────────────────────────────────
+   ACCORDION ROOT
+───────────────────────────────────────── */
+.faq-accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+/* ─────────────────────────────────────────
+   ITEM
+───────────────────────────────────────── */
+.faq-item {
+  display: block;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(255, 255, 255, 0.03);
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-item:hover {
+  border-color: rgba(140, 69, 255, 0.35);
+  background: rgba(140, 69, 255, 0.04);
+}
+
+.faq-item[data-state='open'] {
+  border-color: rgba(140, 69, 255, 0.5);
+  background: rgba(140, 69, 255, 0.07);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.15), 0 8px 32px rgba(140, 69, 255, 0.1);
+}
+
+/* ─────────────────────────────────────────
+   TRIGGER
+───────────────────────────────────────── */
+.faq-trigger {
+  all: unset;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 22px 24px;
+  cursor: pointer;
+}
+
+.faq-trigger-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0;
+}
+
+.faq-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  color: #8C45FF;
+  flex-shrink: 0;
+}
+
+.faq-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.07rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  color: #ffffff;
+  line-height: 1.45;
+  text-align: center;
+  flex: 1;
+}
+
+/* ─────────────────────────────────────────
+   ICON — spins on open/close
+───────────────────────────────────────── */
+.faq-icon {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(140, 69, 255, 0.3);
+  background: rgba(140, 69, 255, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8C45FF;
+  transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-icon svg {
+  transition: transform 0.35s ease;
+}
+
+.faq-trigger:hover .faq-icon {
+  border-color: rgba(140, 69, 255, 0.65);
+  background: rgba(140, 69, 255, 0.16);
+  box-shadow: 0 0 16px rgba(140, 69, 255, 0.35);
+}
+
+.faq-trigger[data-state='open'] .faq-icon {
+  background: rgba(140, 69, 255, 0.22);
+  border-color: #8C45FF;
+  box-shadow: 0 0 20px rgba(140, 69, 255, 0.5);
+}
+
+/* arrow points down when closed, up when open */
+.faq-trigger[data-state='closed'] .faq-icon svg {
+  transform: rotate(0deg);
+}
+
+.faq-trigger[data-state='open'] .faq-icon svg {
+  transform: rotate(180deg);
+}
+
+/* ─────────────────────────────────────────
+   CONTENT — Radix handles height animation
+   via --radix-accordion-content-height
+───────────────────────────────────────── */
+.faq-item [data-radix-accordion-header] {
+  margin: 0;
+}
+
+.faq-content {
+  overflow: hidden;
+}
+
+.faq-content[data-state='open'] {
+  animation: slideDown 0.35s ease forwards;
+}
+
+.faq-content[data-state='closed'] {
+  animation: slideUp 0.35s ease forwards;
+}
+
+@keyframes slideDown {
+  from { height: 0; opacity: 0; }
+  to   { height: var(--radix-accordion-content-height); opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { height: var(--radix-accordion-content-height); opacity: 1; }
+  to   { height: 0; opacity: 0; }
+}
+
+.faq-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #ffffff;
+  line-height: 1.85;
+  margin: 0;
+  padding: 0 24px 22px 56px;
+  text-align: center;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+  .faq-section { padding: 72px 20px; }
+  .faq-heading { font-size: 1.55rem; }
+  .faq-line { width: 40px; }
+  .faq-trigger { padding: 18px 18px; }
+  .faq-text { padding: 0 18px 20px 18px; }
+}
+
+@media (max-width: 480px) {
+  .faq-section { padding: 56px 14px; }
+  .faq-heading { font-size: 1.2rem; white-space: normal; }
+  .faq-line { width: 24px; }
+  .faq-title { font-size: 0.88rem; }
+  .faq-text { font-size: 0.78rem; }
+}

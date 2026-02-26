@@ -1,4 +1,4 @@
-import React from 'react';
+import {React, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
@@ -7,8 +7,14 @@ import Projects from './components/Projects';
 import Pricing from './components/Pricing';
 import Cta from './components/Cta';
 import Contact from './components/Contact';
+import Footer from './components/Footer'
+import Fasebi from './components/Fasebi'
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <>
       <HeroSection />
@@ -17,7 +23,7 @@ function Home() {
       <Pricing />
       <Cta />
     </>
-  );
+  )
 }
 
 function App() {
@@ -28,7 +34,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/fasebi" element={<Fasebi />} />
+
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );

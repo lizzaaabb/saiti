@@ -4,6 +4,9 @@ import '../styles/HeroSection.css'
 const blur1 = process.env.PUBLIC_URL + '/pics/blur.png'
 const web   = process.env.PUBLIC_URL + '/pics/web3.png'
 
+
+
+
 function HeroSection() {
   return (
     <div className='hero-section-container'>
@@ -14,7 +17,7 @@ function HeroSection() {
         <h1 className="hero-title">საიტის აწყობა</h1>
         <h1 className="hero-title2">ვებ გვერდების დამზადება</h1>
         <p className="hero-subtitle">პრემიუმ ხარისხის ვებ გვერდების დამზადება</p>
-        <a href="#contact" className="hero-cta">დაგვიკავშირდი</a>
+        <a href="tel:+995574065469" className="hero-cta">დაგვიკავშირდი</a>
       </div>
 
       <div className="hs-web">

@@ -123,12 +123,15 @@ function ContactCard({ item, index }) {
 }
 
 function Contact() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="cnt-page">
       <img src={blur} alt="" className="cnt-blur-tl" aria-hidden="true" />
       <img src={blur} alt="" className="cnt-blur-br" aria-hidden="true" />
 
-      {/* Left — hero text */}
       <div className="cnt-left">
         <p className="cnt-eyebrow">კონტაქტი</p>
         <h1 className="cnt-title">
@@ -148,7 +151,6 @@ function Contact() {
         </div>
       </div>
 
-      {/* Right — contact groups */}
       <div className="cnt-right">
         {contacts.map((group) => (
           <div key={group.id} className="cnt-group">

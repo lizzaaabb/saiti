@@ -256,8 +256,10 @@
   .pricing-heading { font-size: 1.2rem; gap: 10px; }
   .pricing-heading-line { width: 24px; height: 2px; }
   .pricing-grid { grid-template-columns: 1fr; gap: 12px; }
-  .pricing-card { min-height: unset; }
+  .pricing-card { min-height: unset; text-align: center; } /* 👈 added */
   .pricing-amount { font-size: 1.5rem; }
+  .pricing-price { justify-content: center; } /* 👈 centers the price row */
+  .pricing-cta { display: block; } /* 👈 makes button full width */
 }
 
 @media (max-width: 360px) {

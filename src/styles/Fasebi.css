@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/boowie');
+
+/* ─────────────────────────────────────────
+   PAGE
+───────────────────────────────────────── */
+.fsb-page {
+  background-color: #020103;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
+
+.fsb-blur-tl {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.fsb-blur-br {
+  position: absolute;
+  bottom: 200px;
+  right: -80px;
+  width: 500px;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(180deg);
+}
+
+/* ─────────────────────────────────────────
+   HERO
+───────────────────────────────────────── */
+.fsb-hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px 72px;
+  max-width: 800px;
+  width: 100%;
+  animation: fsb-fade-up 0.8s ease both;
+}
+
+@keyframes fsb-fade-up {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fsb-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8C45FF;
+  -webkit-text-fill-color: #8C45FF;
+  margin: 0 0 20px 0;
+}
+
+.fsb-hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  margin: 0 0 24px 0;
+  line-height: 1.0;
+  letter-spacing: -0.03em;
+}
+
+.fsb-hero-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #8C45FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fsb-hero-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  margin: 0 0 36px 0;
+  max-width: 520px;
+}
+
+.fsb-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.fsb-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.5);
+  padding: 6px 16px;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ─────────────────────────────────────────
+   SECTION
+───────────────────────────────────────── */
+.fsb-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding: 64px 120px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.fsb-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.fsb-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.5px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.fsb-section-line {
+  display: block;
+  height: 3px;
+  width: 60px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.fsb-section-line--left  { background: linear-gradient(90deg, transparent, #8C45FF); }
+.fsb-section-line--right { background: linear-gradient(90deg, #8C45FF, transparent); }
+
+.fsb-section-lead {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+  line-height: 1.8;
+  margin: 0 auto 48px;
+  max-width: 600px;
+}
+
+/* ─────────────────────────────────────────
+   PRICING GRID
+───────────────────────────────────────── */
+.fsb-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  width: 100%;
+}
+
+.fsb-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 18px;
+  overflow: hidden;
+  padding: 28px 24px 24px;
+  box-sizing: border-box;
+  min-height: 300px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.fsb-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fsb-card:hover {
+  background: rgba(140, 69, 255, 0.06);
+  border-color: rgba(140, 69, 255, 0.45);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.15), 0 8px 40px rgba(140, 69, 255, 0.12);
+}
+
+.fsb-card--popular {
+  border-color: rgba(140, 69, 255, 0.5);
+  background: rgba(140, 69, 255, 0.07);
+  box-shadow: 0 0 0 1px rgba(140, 69, 255, 0.25), 0 8px 48px rgba(140, 69, 255, 0.18);
+}
+
+.fsb-card-shine {
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  pointer-events: none;
+}
+
+.fsb-card--popular .fsb-card-shine {
+  background: linear-gradient(90deg, transparent, rgba(140, 69, 255, 0.6), transparent);
+}
+
+.fsb-card-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#0d0518, #0d0518) padding-box,
+    linear-gradient(90deg, #c084fc, #8C45FF, #5b21b6, #8C45FF, #c084fc) border-box;
+}
+
+.fsb-card-top { display: flex; flex-direction: column; gap: 10px; }
+
+.fsb-card-index {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: rgba(140, 69, 255, 0.7);
+  -webkit-text-fill-color: rgba(140, 69, 255, 0.7);
+}
+
+.fsb-card-name {
+  font-family: 'Boowie', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.fsb-card-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.45);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.fsb-card-bottom { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+.fsb-card-price { display: flex; align-items: baseline; gap: 4px; }
+
+.fsb-card-from {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.4);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.08em;
+  margin-right: 2px;
+}
+
+.fsb-card-amount {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  line-height: 1;
+}
+
+.fsb-card-currency {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+}
+
+.fsb-card-cta {
+  display: inline-block;
+  padding: 10px 26px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  border-radius: 100px;
+  text-align: center;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#020103, #020103) padding-box,
+    linear-gradient(90deg, #c084fc, #8C45FF, #5b21b6, #8C45FF, #c084fc) border-box;
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.fsb-card-cta:hover {
+  box-shadow: 0 0 28px rgba(140, 69, 255, 0.45);
+  transform: translateY(-1px);
+}
+
+.fsb-card--popular .fsb-card-cta {
+  background:
+    linear-gradient(90deg, #8C45FF, #5b21b6) padding-box,
+    linear-gradient(90deg, #c084fc, #8C45FF, #5b21b6, #8C45FF, #c084fc) border-box;
+}
+
+/* ─────────────────────────────────────────
+   CTA STRIP
+───────────────────────────────────────── */
+.fsb-cta-strip {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px 100px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.fsb-cta-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(140, 69, 255, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.fsb-cta-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #8C45FF;
+  -webkit-text-fill-color: #8C45FF;
+  margin: 0 0 16px 0;
+}
+
+.fsb-cta-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 36px 0;
+  letter-spacing: -0.03em;
+  background: linear-gradient(180deg, #ffffff 0%, #8C45FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.fsb-cta-btn {
+  display: inline-block;
+  padding: 14px 40px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: 100px;
+  color: #020103;
+  -webkit-text-fill-color: #020103;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  transition: background 0.25s ease, color 0.25s ease, -webkit-text-fill-color 0.25s ease, box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.fsb-cta-btn:hover {
+  background: transparent;
+  color: #ffffff;
+  -webkit-text-fill-color: #ffffff;
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .fsb-section { padding: 56px 60px; }
+  .fsb-grid { grid-template-columns: repeat(2, 1fr); }
+  .fsb-hero-title { font-size: 4rem; }
+}
+
+@media (max-width: 768px) {
+  .fsb-section { padding: 48px 28px; }
+  .fsb-hero-title { font-size: 3rem; }
+  .fsb-section-title { font-size: 1.4rem; white-space: normal; }
+  .fsb-section-line { width: 36px; height: 2px; }
+  .fsb-cta-title { font-size: 2.2rem; }
+  .fsb-blur-tl { width: 500px; }
+}
+
+@media (max-width: 580px) {
+  .fsb-section { padding: 40px 20px; }
+  .fsb-grid { grid-template-columns: 1fr; gap: 12px; }
+  .fsb-hero-title { font-size: 2.4rem; }
+  .fsb-hero-desc { font-size: 0.88rem; }
+  .fsb-hero { padding: 48px 20px 56px; }
+  .fsb-section-header { gap: 12px; }
+  .fsb-section-line { width: 24px; }
+  .fsb-cta-title { font-size: 1.8rem; }
+  .fsb-cta-strip { padding: 60px 20px 80px; }
+  .fsb-card { text-align: center; }
+  .fsb-card-price { justify-content: center; }
+  .fsb-blur-tl { width: 340px; }
+}
+
+@media (max-width: 360px) {
+  .fsb-hero-title { font-size: 2rem; }
+  .fsb-section-title { font-size: 1.2rem; }
+}
