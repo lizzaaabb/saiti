@@ -21,7 +21,7 @@ function Footer() {
             <h4 className="ftr-col-title">ნავიგაცია</h4>
             <nav aria-label="Footer ნავიგაცია" >
               <Link to="/" className="ftr-link">მთავარი</Link>
-              <a href="#work" className="ftr-link">პროექტები</a>
+              <Link  to="/projects" className="ftr-link">პროექტები</Link>
               <Link to="/fasebi" className="ftr-link">საიტის ფასები</Link>
               <Link to="/contact" className="ftr-link">კონტაქტი</Link>
             </nav>

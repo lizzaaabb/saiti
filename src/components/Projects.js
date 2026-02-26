@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react'
+import {Link} from 'react-router-dom'
 import '../styles/Projects.css'
 const project1 = process.env.PUBLIC_URL + '/p1.png'
 const project2 = process.env.PUBLIC_URL + '/p2.png'
@@ -90,7 +91,7 @@ return (
 <ProjectCard key={p.id} project={p} index={i} />
         ))}
 </div>
-<a href="#work" className="prj-all-btn">იხილე ყველა პროექტი</a>
+<Link to="/projects" className="prj-all-btn">იხილე ყველა პროექტი</Link>
 </div>
   )
 }
